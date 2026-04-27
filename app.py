@@ -267,10 +267,9 @@ def relatorio():
     buffer.seek(0)
     return send_file(buffer, as_attachment=True, download_name="relatorio.pdf")
 
-@app.route('/logout')
-def logout():
-    session.clear()
-    return redirect('/')
+@app.route('/')
+def home():
+    return "<h1>Sistema no ar 🚑</h1>"
 
 # ---------------- APP DESKTOP ----------------
 
